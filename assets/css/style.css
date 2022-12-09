@@ -1,0 +1,321 @@
+:root {
+  /* theme color */
+  --dark: #090a0a;
+  --light: #3ba6dc;
+  --lighter: #d3d0d5;
+
+  /* font size */
+  --big: 40px;
+  --medium: 30px;
+  --small: 20px;
+  --smaller: 17px;
+
+  /* margin */
+  --frame-bottom-margin: 30px;
+}
+
+/* applies to all */
+body {
+  color: var(--dark);
+  font-family: poppins, sans-serif;
+  background-color: var(--lighter);
+}
+
+h1 {
+  font-size: var(--big);
+}
+
+h2 {
+  font-size: var(--medium);
+}
+
+h3 {
+  font-size: var(--small);
+}
+
+/* Navigation menu */
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #09000f;
+  margin: 0px;
+  padding: 20px 0px;
+}
+
+#my-name {
+  color: var(--dark);
+  background-color: var(--light);
+  width: 300px;
+  margin: 0px;
+  padding: 10px;
+  text-align: right;
+}
+
+#menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 60%;
+  margin: 0;
+  padding: 25px;
+}
+
+#menu a {
+  padding: 5px;
+  font-size: var(--medium);
+  color: var(--light);
+  background-color: var(--dark);
+}
+
+#menu a:hover {
+  color: var(--lighter);
+}
+
+/* style the hero image, box, background, set porition settings */
+#hero-image {
+  height: 300px;
+  width: 100%;
+  margin-bottom: var(--frame-bottom-margin);
+  background-image: url("../images/background3.jpeg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+/* a new page sub-title */
+#sub-title {
+  position: absolute;
+  bottom: 40px;
+  right: 0px;
+  color: var(--dark);
+  background-color: var(--light);
+  width: 400px;
+  margin: 0px;
+  padding: 10px;
+  text-align: left;
+}
+
+/* main content */
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.card {
+  width: 100%;
+  margin: 0;
+  margin-bottom: var(--frame-bottom-margin);
+  display: flex;
+  flex-direction: row;
+}
+
+/* styling for the title of "About Me", "Work" and "Contact Me" on the side */
+.card-title {
+  width: 25%;
+  margin: 0;
+  padding: 20px;
+  border-right: 5px solid var(--dark);
+  text-align: right;
+}
+
+/* all cards on the page */
+.card-details {
+  width: 75%;
+  margin: 0;
+  padding: 0px 20px;
+  display: flex;
+  flex-direction: row;
+}
+
+/* NO wrap for "About Me" and "Contact Me"*/
+
+/* wrap for "Work" */
+#card-details-work {
+  flex-wrap: wrap;
+}
+
+#logo-frame {
+  width: 200px;
+  margin: 0;
+  height: 200px;
+}
+
+/* logo size */
+#logo {
+  width: 160px;
+  height: 160px;
+  background-image: url(../images/circle-logo.png);
+  background-size: cover;
+  background-position: center;
+  border: 5px solid var(--light);
+}
+
+#description {
+  width: auto;
+  margin: 0;
+  padding: 0 10px;
+  text-align: left;
+  font-size: var(--smaller);
+  line-height: 1.2;
+}
+
+.my-work-frame {
+  width: 50%;
+  height: 200px;
+  margin: 0;
+  padding: 10px 10px 0 0;
+  position: relative;
+}
+
+/* HORISEON project */
+#horiseon {
+  width: 100%;
+  height: 300px;
+  padding-top: 0;
+}
+
+.project-photo {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border: 5px solid var(--light);
+  background-size: cover;
+  background-position: center;
+  transition: opacity 0.5s;
+}
+
+/* change opacity when hover over project photo */
+.project-photo:hover {
+  opacity: 0.5;
+}
+
+/* set position to the bottom left project-photo */
+.project-details {
+  position: absolute;
+  left: 0;
+  bottom: 20px;
+  color: var(--dark);
+  background-color: var(--light);
+  margin: 0;
+  padding: 10px;
+}
+
+/* set backgroup image for each project */
+#project-photo-1 {
+  background-image: url("../images/code-refractor.jpeg");
+  background-position: center;
+}
+
+#project-photo-2 {
+  background-image: url("../images/coming-soon.jpg");
+  background-position: center;
+}
+
+#project-photo-3 {
+  background-image: url("../images/coming-soon.jpg");
+  background-position: right;
+}
+
+#project-photo-4 {
+  background-image: url("../images/coming-soon.jpg");
+}
+
+#project-photo-5 {
+  background-image: url("../images/coming-soon.jpg");
+}
+
+#contact-list {
+  width: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+}
+
+#contact-list a {
+  padding: 20px 5px;
+  font-size: var(--small);
+  color: var(--dark);
+  background-color: var(--lighter);
+}
+
+/* style for screen size of 992px or smaller (tablet) */
+@media screen and (max-width: 992px) {
+  /* put the Name on top of the Menu */
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+  #my-name {
+    text-align: center;
+  }
+  #menu {
+    width: 100%;
+  }
+}
+
+/* style for screen size of 768px or smaller (mobile phone) */
+@media screen and (max-width: 768px) {
+  #menu {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    flex-direction: column;
+    align-items: center;
+  }
+  .card-title {
+    border-right: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .card-details {
+    width: 100%;
+  }
+
+  /* settings for placing the profile picture in the center */
+  #logo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .project-frame {
+    width: 100%;
+    height: 300px;
+  }
+
+  #card-details-about-me {
+    flex-direction: column;
+  }
+
+  #contact-list {
+    flex-direction: column;
+  }
+}
+
+/* footer */
+footer {
+  padding: 25px;
+  clear: both;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  text-align: center;
+}
+
+footer h2 {
+  font-size: 20px;
+}
+
+footer p {
+  font-size: 16px;
+  margin-top: 10px;
+}
