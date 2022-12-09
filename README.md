@@ -6,6 +6,7 @@ WHEN clicking on one of the links in the navigation the UI scrolls to the corres
 WHEN clicking on the link to the section about my work, the UI scrolls to a section with titled images of my most recent work
 ADDED link to the Horiseon project; the application's image is larger in size than the others
 WHEN resizing the page, the layout is responsive 
+ADDED notes to the HTML and CSS to make it easier to follow and read.
 
 ## Screenshots for different media sizes
 
